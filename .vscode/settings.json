@@ -1,0 +1,22 @@
+{
+  "cSpell.words": [
+    "astro",
+    "astrojs",
+    "bidou",
+    "commitlint",
+    "daisyui",
+    "fxhash",
+    "tailwindcss",
+    "tsconfigs"
+  ],
+  "eslint.validate": [ 
+    "javascript",
+    "javascriptreact",
+    "astro", 
+    "typescript", 
+    "typescriptreact" 
+  ],
+    "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml, .npmrc, .gitignore, README.md",
+  },
+}
