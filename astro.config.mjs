@@ -8,5 +8,11 @@ const site = process.env.SITE_URL || 'https://xsfunc.xyz'
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
   site,
-  integrations: [sitemap(), tailwind(), image()],
+  integrations: [
+    sitemap(),
+    tailwind(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+  ],
 })
