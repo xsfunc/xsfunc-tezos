@@ -1,96 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import About from "shared/ui/About.astro";
+import CategoryTitle from "shared/ui/CategoryTitle.astro";
+import Layout from "shared/ui/Layout.astro";
+import Tool from "shared/ui/Tool.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Welcome | xsfunc">
+  <About />
+
+  <CategoryTitle title="NFTs" id="nft" />
+  <Tool
+    title="Pingos"
+    link="https://objkt.com/profile/tz2G1mr6vbdn48tfP73KZcS6oBpDrUuXJFL3/created?faContracts=KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton"
+    >Collection of Pingos.</Tool
+  >
+  <Tool title="Path" link="https://www.fxhash.xyz/generative/slug/path"
+    >Generative art on fx(hash), has utility.</Tool
+  >
+
+  <CategoryTitle title="Tools" id="tools" />
+  <Tool title="xshash.xyz" id="xshash" link="https://xshash.xyz">
+    <p>Toolkit for minting and colleciting on fx(hash).</p>
+  </Tool>
+  <Tool title="objkt.xsfunc.xyz" id="objkt" link="https://objkt.xsfunc.xyz">
+    <p>Allow you to collect items on objkt faster.</p>
+  </Tool>
+  <Tool title="henext.xyz" id="henext" link="https://henext.xyz">
+    <p>Alternative UI for teia.art (HEN).</p>
+  </Tool>
 </Layout>
-
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
